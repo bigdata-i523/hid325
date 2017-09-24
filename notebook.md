@@ -34,5 +34,6 @@ WRITING
 
 ONLINE DISCUSSION 
 9/18/17 participated in online discussion 
-9/24/17 listened previous tutorial to get used with jabref 
+9/24/17 listened to previous tutorial to get used with jabref 
+9/25/17 need help with jabref/ ask question about it tomorrow
 
