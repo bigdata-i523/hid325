@@ -23,5 +23,18 @@ paper1:
    type: latex
    status: in progress
 ```
+# Paper 2
 
+```
+paper2:
+   author: 
+   - J. Robert Langlois
+   hid:
+   - 325
+   title: This is my paper about data sharing
+   abstract: This paper showcases the lack of data sharing and the explain the importance of data sharing,and the                replications of sciences. 
+   url: https://github.com/bigdata-i523/sample-hid000/paper2/report.pdf   
+   type: latex
+   status: in progress
+```
    
