@@ -15,27 +15,27 @@
 
 
 
-THEORY
-9/01/17-9/08/17 watched online lecture video on deta deluge 
-9/18/17-9/24/17 watched online lecture video on big data and health/ health/medical information. 
+# THEORY
+* 9/01/17-9/08/17 watched online lecture video on deta deluge 
+* 9/18/17-9/24/17 watched online lecture video on big data and health/ health/medical information. 
 
-PRACTICE 
-9/01/17-9/08/17 purchased rasberry pi 3
-9/01/17-9/08/17 installed python2 and pycharm on my mac
-9/18/17        I will try to build up my rasberry pi 3
-9/18/17-9/24/17 download jabref and sharelatext
-
-
-WRITING
-9/08/17-9/15/17 research articles and read for paper 1
-9/08/17-9/15/17 get acustomed with sharelatex
-9/18/17         try to install jabref (it refuses to download on my mac/seek TA's assistance if problem persist) 
-9/18/17-9/26/17 finish paper 1
-9/18/17-9/24/17 identified topic for paper 2
+# PRACTICE 
+* 9/01/17-9/08/17 purchased rasberry pi 3
+* 9/01/17-9/08/17 installed python2 and pycharm on my mac
+* 9/18/17        I will try to build up my rasberry pi 3
+* 9/18/17-9/24/17 download jabref and sharelatext
 
 
-ONLINE DISCUSSION 
-9/18/17 participated in online discussion 
-9/24/17 listened to previous tutorial to get used with jabref 
-9/25/17 need help with jabref/ ask question about it tomorrow
+# WRITING
+* 9/08/17-9/15/17 research articles and read for paper 1
+* 9/08/17-9/15/17 get acustomed with sharelatex
+* 9/18/17         try to install jabref (it refuses to download on my mac/seek TA's assistance if problem persist) 
+* 9/18/17-9/26/17 finish paper 1
+* 9/18/17-9/24/17 identified topic for paper 2
+
+
+# ONLINE DISCUSSION 
+* 9/18/17 participated in online discussion 
+* 9/24/17 listened to previous tutorial to get used with jabref 
+* 9/25/17 need help with jabref/ ask question about it tomorrow
 
