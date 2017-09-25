@@ -1,5 +1,6 @@
 # Meetings 
-* 2017/09/25: Meeting: attended online meeting at 6 pm, learned Jabref
+* 2017/09/25: Meeting: attended online meeting at 6 pm, learned how to do blibliography using Jabref
+* 2017/09/25  Fixed my readme and notebook files
 # LOGISTIC
 * 8/21/17-9/1/17 Read course introduction, 
 * 8/21/17-9/01/17 get acustom with piazza, 
