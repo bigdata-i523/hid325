@@ -33,6 +33,8 @@
 * 9/18/17         try to install jabref (it refuses to download on my mac/seek TA's assistance if problem persist) 
 * 9/18/17-9/26/17 finish paper 1
 * 9/18/17-9/24/17 identified topic for paper 2
+* 2017/09/26 updated paper 1 
+* 2017/09/26-2017/10/09 continue to work on paper 1 and submit paper1 
 
 
 # ONLINE DISCUSSION 
