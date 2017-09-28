@@ -1,18 +1,18 @@
 # Meetings 
-* 2017/09/25: Meeting: attended online meeting at 6 pm, learned how to do blibliography using Jabref
-* 2017/09/25  Fixed my readme and notebook files
+* 09/25/17: Meeting: attended online meeting at 6 pm, learned how to do blibliography using Jabref
+* 09/25/17:  Fixed my readme and notebook files
 # LOGISTIC
-* 8/21/17-9/1/17 Read course introduction, 
-* 8/21/17-9/01/17 get acustom with piazza, 
-* 8/21/17-9/01/17 Write biography/introduction to the course
-* 9/01/17-9/08/17 create github account
-* /01/17-9/08/17 create future systems account
-* 9/01/17-9/08/17 (spent inconceivably large amount of time trying to create chameleon account with no succes :))/email prof about this issue 
-* 9/01/17-9/08/17 complete general survey on the course/take doodle survey/participate in online course discussion
-* 9/08/17-9/15/17 research articles and read for paper 1
-* 9/18/17         create readme.txt & create notebook for the course
-* 9/18/17-9/24/17 update my readme.txt
-* 9/24/17         update my notebook
+* 8/21/17-9/1/17: Read course introduction, 
+* 8/21/17-9/01/17: Get acustom with piazza, 
+* 8/21/17-9/01/17: Write biography/introduction to the course
+* 9/01/17-9/08/17: Create github account
+* /01/17-9/08/17: Create future systems account
+* 9/01/17-9/08/17: (Spent inconceivably large amount of time trying to create chameleon account with no succes :))/email prof about this issue 
+* 9/01/17-9/08/17: Complete general survey on the course/take doodle survey/participate in online course discussion
+* 9/08/17-9/15/17: Research articles and read for paper 1
+* 9/18/17: reate readme.txt & create notebook for the course
+* 9/18/17-9/24/17: update my readme.txt
+* 9/24/17: update my notebook
 
 
 
