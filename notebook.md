@@ -1,6 +1,7 @@
 # Meetings 
-* 09/25/17: Meeting: attended online meeting at 6 pm, learned how to do blibliography using Jabref
+* 09/25/17: Meeting: attended online meeting at 6 pm; learned how to do blibliography using Jabref
 * 09/25/17:  Fixed my readme and notebook files
+* 10/02/17: Attended online meeting at 6 pm, and watched prof Laszewski helping a student with python, but I have no idea of what they were doing because my python knowledge is very limited. 
 # LOGISTIC
 * 08/21/17-09/1/17: Read course introduction, 
 * 08/21/17-09/01/17: Get acustom with piazza, 
