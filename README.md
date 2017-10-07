@@ -32,7 +32,7 @@ paper1:
        of security, and establishing new and more appropriate norms to communicate sensitive health information.
    url: https://github.com/bigdata-i523/hid325/paper1/report.pdf
    type: latex
-   status: 80%
+   status: 90%
    chapter: Health
 ```
 # Paper 2
