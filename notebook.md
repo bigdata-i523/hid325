@@ -37,6 +37,7 @@
 * 09/26/17: Updated paper 1 
 * 09/26/17-10/09/17: Continue to work on paper 1 and submit paper1 
 * 10/05/17: Updated paper 1 
+*10/07/17: Updated my readme.txt file
 
 
 # ONLINE DISCUSSION 
