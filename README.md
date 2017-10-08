@@ -42,7 +42,7 @@ paper1:
        sensitive health information.
    url: https://github.com/bigdata-i523/hid325/paper1/report.pdf
    type: latex
-   status: 90%
+   status: 100%
    chapter: Health
 ```
 # Paper 2
