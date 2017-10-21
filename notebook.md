@@ -28,6 +28,7 @@
 * 10/20/17: Fixed issues and updated paper1 file 
 * 10/21/17: Reviewed articles and began working on paper2
 * 10/20/17: Read on big data and economics 
+* 10/21/17: Watched video on big data applications and sports informatics
 
 # PRACTICE 
 * 09/01/17-09/08/17: Purchased rasberry pi 3
