@@ -3,6 +3,7 @@
 * 09/25/17:  Fixed my readme and notebook files
 * 10/02/17: Attended online meeting at 6 pm, and watched prof Laszewski helping a student with python, but I have no idea of what they were doing because my python knowledge is very limited. 
 * 10/16/17: Attended online meeting at 7 pm, learned about how to review paper1 and the limitations of Jabref
+* 10/20/17: Attended online meeting Office hour and asked question regarding paper 1
 # LOGISTIC
 * 08/21/17-09/1/17: Read course introduction, 
 * 08/21/17-09/01/17: Get acustom with piazza, 
@@ -15,12 +16,18 @@
 * 09/18/17: Create readme.txt & create notebook for the course
 * 09/18/17-09/24/17: Update my readme.txt
 * 09/24/17: Update my notebook
+* 10/21/17: Watched video on how to new jabref
+
 
 
 
 # THEORY
 * 09/01/17-09/08/17: Watched online lecture video on deta deluge 
 * 09/18/17-09/24/17: Watched online lecture video on big data and health/ health/medical information. 
+* 10/18/17: learned how to use turnitin and submitted paper 1 for review
+* 10/20/17: Fixed issues and updated paper1 file 
+* 10/21/17: Reviewed articles and began working on paper2
+* 10/20/17: Read on big data and economics 
 
 # PRACTICE 
 * 09/01/17-09/08/17: Purchased rasberry pi 3
@@ -40,6 +47,8 @@
 * 10/05/17: Updated paper 1 
 * 10/07/17: Updated my readme.txt file
 * 10/08/17: Final Update of paper1/ submitted paper1
+* 10/20/17: Fixed issues and updated paper1 file 
+
 
 
 # ONLINE DISCUSSION 
