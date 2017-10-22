@@ -49,6 +49,8 @@
 * 10/07/17: Updated my readme.txt file
 * 10/08/17: Final Update of paper1/ submitted paper1
 * 10/20/17: Fixed issues and updated paper1 file 
+* 10/22/17: Fixed issues and updated paper1
+* 10/22/17: Conducted research articles for paper2
 
 
 
