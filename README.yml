@@ -31,13 +31,19 @@ paper1:
     type: latex
     url: https://github.com/bigdata-i523/hid325/paper1/report.pdf
 paper2:
-    abstract: "This paper showcases the lack of data sharing and the explain the importance\
-        \ of data sharing, and the replications of sciences. \n"
+    abstract: > 
+        In spite of the large influx of data that exists in many fields, 
+        scientists have faced with many challenges when it comes to the topic of data sharing. 
+        Opponents of this practice are skeptical to data sharing due to privacy concern, fear of stigmatization,
+        the problem of funding, repository of data, transparency, and so forth.
+        While it is important to keep these challenges in mind, 
+        it is critical to take a look at the different advantages of data sharing. 
     author:
         - J. Robert Langlois
+    chapter: Data Sharing
     hid:
         - 325
-    status: in progress
-    title: This is my paper about data sharing
+    status: 60%
+    title: The importance of data sharing and the replication of the sciences
     type: latex
     url: https://github.com/bigdata-i523/hid325/paper2/report.pdf
