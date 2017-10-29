@@ -34,8 +34,8 @@ paper2:
     abstract: > 
         In spite of the large influx of data that exists in many fields, 
         scientists have faced with many challenges when it comes to the topic of data sharing. 
-        Opponents of this practice are skeptical to data sharing due to privacy concern, fear of stigmatization,
-        the problem of funding, repository of data, transparency, and so forth.
+        Opponents of this practice are skeptical to data sharing due to privacy concern, 
+        fear of stigmatization, the problem of funding, repository of data, transparency, and so forth.
         While it is important to keep these challenges in mind, 
         it is critical to take a look at the different advantages of data sharing. 
     author:
