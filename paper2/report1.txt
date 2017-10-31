@@ -1,0 +1,9 @@
+\documentclass[sigconf]{acmart}
+
+\input{format/i523}
+
+\begin{document}
+
+\input{content}
+
+\end{document}
