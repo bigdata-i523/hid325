@@ -44,7 +44,7 @@ paper2:
     chapter: Data Sharing
     hid:
         - 325
-    status: 60%
+    status: 100%
     title: The importance of data sharing and the replication of the sciences
     type: latex
     url: https://github.com/bigdata-i523/hid325/paper2/report.pdf
