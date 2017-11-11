@@ -1,0 +1,88 @@
+\documentclass[sigconf]{acmart}
+
+\input{format/i523}
+
+\begin{document}
+\title{The Importance of Data Sharing and the Replication of the Sciences}
+
+
+
+
+\author{J. Robert Langlois}
+\affiliation{%
+  \institution{Indiana University}
+ \address{}
+  \city{Bloomington, IN 47408} 
+  \country{USA}}
+\email{langloir@umail.iu.edu}
+
+
+
+
+\begin{abstract}
+
+
+In spite of the large influx of data that exists in many fields, scientists have faced with many challenges when it comes to the topic of data sharing. Opponents of this practice are skeptical to data sharing due to privacy concern, fear of stigmatization, the problem of funding, repository of data, transparency, and so forth. While it is important to keep these challenges in mind, it is critical to take a look at the different advantages of data sharing. 
+
+\end{abstract}
+
+\keywords{i523, HID325, Data Sharing}
+
+
+\maketitle
+
+\section{Introduction}
+
+The world today witnesses an increase in digital information in many fields. While digital information exists in abundant quantity in many fields, one challenge that scientists and researchers face is the lack of data sharing among fellow scientists. ''Data sharing and replication remain hotly contested topics in the sciences, provoking substantial conversation,'' \cite{leetaru2016}. The reluctant to share digital information among researchers is due to fear of stigmatization, the problem of funding, repository of data, transparency, privacy concern, and so forth. While many oppose this idea, proponents of data sharing advanced numerous advantages of this practice, like respond to social crisis in timely manner, contribute the advancement of the sciences, and avoid spending money unnecessary to conduct similar research. 
+
+
+\section{The relevance of Data Sharing and Data Replication 
+}
+
+
+
+\subsection{Data Replication}
+
+Practicing sharing data among scientists is critical for many reasons. One way sharing data is important is that researchers can build upon previous findings to solve societal problems. Data sharing among fellow scientists is crucial to quickly respond to outbreak. During the Ebola crisis in 2016, because researchers were to collaborate between themselves, they were able to quickly eradicate the threat \cite{yozwiak2015data}. Because of the collaborations among researchers, they were able to quickly trace that the virus was circulated from Guinea to Sierra Leone and that it was being sustained by person-to-person. As indicated in \cite{vogel2014delays} bureaucracy and lack of record keeping are some of the challenges that public health and scientists faced in their effort to response to outbreak, like Ebola. wrote about the problem that public health faced when it comes to response to outbreak, like Ebola. Thus, encouraging data sharing among scientists can play a vital role in helping researchers to respond to social crisis in timely manner. Data sharing can help to reduce the unnecessary cost to maintain and archive the information. 
+
+\subsection{Data Sharing Help Reduce Unnecessary Cost
+}
+
+Another reason to encourage data sharing is that data sharing help to reduce unnecessary cost. As digital information is made available in the cloud system, researchers will be able to access the same type of information at different locations.  ''Data sharing is driven by the need to maintain more accurate and up-to-date spatial databases, but at the same time reduce data acquisition and maintenance costs''\cite{stoakes2005data}. If data becomes more accessible, not only this will contribute to lowering the cost to access data, but also will it encourage researchers in their endeavors to respond to social outbreak quicker. Data sharing can also play a crucial role in advancing science, which is our next point. 
+
+\subsection{Data Sharing Advances the Science}
+
+Contrarily to what many might think, in order to advance science through replication of existing findings, scientists must rely on the work of previous researchers. Just like human being cannot live in vacuum; the way science develop is through collaborative effort among fellow scientists. One advantage of this practice is that by sharing their work, scientists will be able to spout errors that previous researchers have made, reveal fraud, build community, etc \cite{leetaru2016}. As found in \cite{borgman2012conundrum} policy makers must develop policies that explain how to embark in this process. If data are not being replicated, the world of science will face far more challenges in the future. Data replication involves open access to data so that researchers can continue to study, analyze, and make new conclusion about existing data. Now, if data sharing allows the replication of the sciences, why are many people opposed such practice? 
+
+
+
+\section{Blocks to Data Sharing}
+
+\subsection{Transparency Issue}
+
+One of the blocks to data sharing is transparency, which is the fear that proprietary of data will not be respected. This fear of getting credit for their scientific work precludes some researchers from being willing to involve in data sharing. The term data parasites
+ is often used to describe the practice of using data of others without attributing proper credit to its owner \cite{leetaru2016}. To overcome this sense of fear that surrounds data sharing, researchers must cultivate a sense of honesty that will compel them to give credit to where the credit is due. Furthermore, researchers must agree on standards of practice to responsibly sharing data \cite{borgman2012conundrum}.  It is critical that scientists work together to figure out how to overcome this sense of fear that exists when it comes to sharing data. 
+
+\subsection{The Problem of Patients' Privacy}
+
+Patient privacy is another block to data sharing. scientists often have to wrestle to figure out which data belongs to the public domains or not. Moreover, patient's consent is another crucial barrier to data sharing. Patients are often reluctant to share their personal information due to fear of being ostracized from society and stigmatization. it is important to cultivate a sense of openness and educate patients that their personal information will be protected \cite{yozwiak2015data}. Thus, researchers must do their very to protect patient's privacy. In so doing, patients will be more likely to want to participate in future research. Robert H. ''rather than viewing privacy concerns as impediment, policy makers, scientists and HIT specialists should embrace privacy as an opportunity that, if addressed, can enhance the flow of information'' \cite{shelton2011electronic}. Thus, the necessity to involve patients in the process and empower them to make better decision with their data. ''To solve the big data privacy quandary, individuals must be offered meaningful rights to access their data in a usable, machine-readable format'' \cite{tene2012big}. It appears that individuals often ask to share their personal information, and when they did, they gain nothing from sharing their information; the benefits only go to big corporate ''If individuals could reap some of the gains of big data, they would be incentivized to actively participate in the data economy, aligning their own self-interest with broader societal goals'' \cite{tene2012big}. If patients feel empowered and feel that have control over their data, and that they can benefit from this exchange, they will be likely willing to involve in sharing their data.
+
+
+\subsection{Data Archival}
+
+Some other barriers to data sharing and replication may consist of the locations to house the data; who pay to maintain the data? ''Access to data requires that the data be hosted somewhere and managed by someone,'' \cite{berman2013will}. While it is crucial to encourage data sharing, data archiving is another important conversation that needs to happen because for data to be accessible to researchers, it needs to be located somewhere, in a safe environment. 
+
+While it is very important to recognize the effort of different sectors, like Amazon Web Service, to help provide a secure platform to house the data, it seems crucial that the public and private sector work together on this issue to create proper norms and develop proper structure on where to house the data that can be utilized to respond to different problems of society. ''This is not to look to one sector alone, but develop partnerships among sectors'' \cite{berman2013will}. If public and private sector work together, they will more be equipped to tackle this issue of data archiving by addressing like, what data to save, where to archive the data, who are responsible to pay for the data, etc. ''Managing the life cycle of scientific data presents many challenges. These include deciding responsibilities, funding, resource allocation, what data should be kept and for how long'' \cite{lynch2008big}. This is a further indication that managing data should not be the effort of one entity, rather everyone must come together to work on this issue. Also, lessons can be learned from other countries, like the Netherlands and the UK, that seem to be more advance in this matter. The Netherlands, for example, have created a National Library to keep all research findings \cite{sarkol2016scientific}. The US can take lesson from this model to create their own data center where the data can be kept, and develop proper policies on how to access the data.
+
+
+
+\section{Conclusions}
+
+We have attempted to put in evidence the dialogue that needs to continue to happen among scientists to address numerous challenges that researchers have faced when it comes to data sharing. We have seen that data sharing has played a vital role in helping scientist to quickly respond to societal crisis, like Ebola. In addition to that, data sharing can contribute to improve and advance science. we have also explored the fear that some researchers have to share their findings with other researchers due to transparency concern. The encouragement to develop proper policies to establish the standard to data sharing was also addressed, as well as the effort of scientists to respect intellectual probity by attributing credits to where the credits belong. 
+
+
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{report1} 
+
+\end{document}
