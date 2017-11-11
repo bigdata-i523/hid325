@@ -5,22 +5,28 @@ owner:
     url: https://github.com/bigdata-i523/hid325
 paper1:
     abstract: >
-        Today, one of the essential functions of technology is the collection,
-        storage, processing, and transmission of data.  The healthcare industry, including
-        mental health services, are huge benefactors of these advances in technology.  From
-        birth, medical facilities start collecting information about all individuals;
-        they do so even up to the point of death and all points in between.  Over
-        a lifetime,that is an abundance of information about an individual.  The question
-        that must be answered is, how is that data protected to ensure patients''
-        privacy rights?  The more information collected on individuals, the more responsibility
-        is assumed by those who collect data; methods for how the data is collected,
-        used and shared must ensure the protection of patients'' privacy rights.  This
-        challenge is one that needs to be navigated and addressed by medical professionals
-        and facilities, policymakers, and the individuals whose data is collected.
-        Specifically in the mental health field, by resolving patients'' privacy concerns,
-        policymakers and researchers can transform the field by introducing more cost
-        effective strategies, ensuring patients'' sense of security, and establishing
-        new and more appropriate norms to communicate sensitive health information.
+        Today, one of the essential functions of technology is the
+        collection, storage, processing, and transmission of data.
+        The healthcare industry, including mental health services, are
+        huge benefactors of these advances in technology.  From birth,
+        medical facilities start collecting information about all
+        individuals; they do so even up to the point of death and all
+        points in between.  Over a lifetime,that is an abundance of
+        information about an individual.  The question that must be
+        answered is, how is that data protected to ensure patients''
+        privacy rights?  The more information collected on
+        individuals, the more responsibility is assumed by those who
+        collect data; methods for how the data is collected, used and
+        shared must ensure the protection of patients'' privacy
+        rights.  This challenge is one that needs to be navigated and
+        addressed by medical professionals and facilities,
+        policymakers, and the individuals whose data is collected.
+        Specifically in the mental health field, by resolving
+        patients'' privacy concerns, policymakers and researchers can
+        transform the field by introducing more cost effective
+        strategies, ensuring patients'' sense of security, and
+        establishing new and more appropriate norms to communicate
+        sensitive health information.
     author:
         - J. Robert Langlois
     chapter: Health
@@ -32,13 +38,15 @@ paper1:
     url: https://github.com/bigdata-i523/hid325/paper1/report.pdf
 paper2:
     review: Nov 6 2017
-    abstract: > 
-        In spite of the large influx of data that exists in many fields, 
-        scientists have faced with many challenges when it comes to the topic of data sharing. 
-        Opponents of this practice are skeptical to data sharing due to privacy concern, 
-        fear of stigmatization, the problem of funding, repository of data,
-        transparency, and so forth. While it is important to keep these challenges in mind, 
-        it is critical to take a look at the different advantages of data sharing. 
+    abstract: >
+        In spite of the large influx of data that exists in many
+        fields, scientists have faced with many challenges when it
+        comes to the topic of data sharing.  Opponents of this
+        practice are skeptical to data sharing due to privacy concern,
+        fear of stigmatization, the problem of funding, repository of
+        data, transparency, and so forth. While it is important to
+        keep these challenges in mind, it is critical to take a look
+        at the different advantages of data sharing.
     author:
         - J. Robert Langlois
     chapter: Data Sharing
@@ -49,24 +57,26 @@ paper2:
     type: latex
     url: https://github.com/bigdata-i523/hid325/paper2/report.pdf
 project:
-   type: report
-   author: 
-       - J. Robert Langlois
-   pid:
-   - 325
-   chapter: Data Sharing, Replication, and Data Archiving
-   title: The importance of data sharing and the replication of the sciences, but what about data archiving?
-   abstract: >
-       This project will showcase the importance to encourage data sharing among scientists
-       to advance the sciences. Data sharing presents many advantages, such as it reduces costs,
-       it allows researchers to build up on the work of previous researchers, 
-       it helps to respond to societal problems quicker, etc. While it is critical to encourage
-       and value the collaborative spirit among fellow scientists,
-       another conversation that needs to happen is data archiving. 
-       Where to house the data? and who pay to keep the data? 
-       It is necessary that both public and private sectors get together in an attempt 
-       to solve the problems surrounding data archiving. 
-   url: https://github.com/bigdata-i523/hip325/project/report.pdf
-   type: latex
-   status: in progress
-
+    type: report
+    author:
+        - J. Robert Langlois
+    pid:
+        - 325
+    chapter: Data Sharing, Replication, and Data Archiving
+    title: >
+        The importance of data sharing and the replication of the
+        sciences, but what about data archiving?
+    abstract: >
+        This project will showcase the importance to encourage data
+        sharing among scientists to advance the sciences. Data sharing
+        presents many advantages, such as it reduces costs, it allows
+        researchers to build up on the work of previous researchers, it
+        helps to respond to societal problems quicker, etc. While it is
+        critical to encourage and value the collaborative spirit among
+        fellow scientists, another conversation that needs to happen is
+        data archiving.  Where to house the data? and who pay to keep
+        the data?  It is necessary that both public and private sectors
+        get together in an attempt to solve the problems surrounding
+        data archiving.
+    url: https://github.com/bigdata-i523/hip325/project/report.pdf
+    status: 0%
