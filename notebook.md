@@ -5,7 +5,7 @@
 * 10/16/17: Attended online meeting at 7 pm, learned about how to review paper1 and the limitations of Jabref
 * 10/20/17: Attended online meeting Office hour and asked question regarding paper 1
 * 11/06/17: Attended online meeting office hour.
-* 11/20/17: Attended online meeting at 6 pm and learn about project and jupyter notebook
+* 11/20/17: Attended online meeting at 6 pm and learned about project and jupyter notebook
 # LOGISTIC
 * 08/21/17-09/1/17: Read course introduction, 
 * 08/21/17-09/01/17: Get acustom with piazza, 
