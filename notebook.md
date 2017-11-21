@@ -4,6 +4,8 @@
 * 10/02/17: Attended online meeting at 6 pm, and watched prof Laszewski helping a student with python, but I have no idea of what they were doing because my python knowledge is very limited. 
 * 10/16/17: Attended online meeting at 7 pm, learned about how to review paper1 and the limitations of Jabref
 * 10/20/17: Attended online meeting Office hour and asked question regarding paper 1
+* 11/06/17: Attended online meeting office hour.
+* 11/20/17: Attended online meeting at 6 pm and learn about project and jupyter notebook
 # LOGISTIC
 * 08/21/17-09/1/17: Read course introduction, 
 * 08/21/17-09/01/17: Get acustom with piazza, 
@@ -17,7 +19,8 @@
 * 09/18/17-09/24/17: Update my readme.txt
 * 09/24/17: Update my notebook
 * 10/21/17: Watched video on how to new jabref
-
+* 11/19/17: Learned about jupyter notebook
+*11/19/17 : Watched youtube videos on how to create jupyter notebook 
 
 
 
@@ -35,6 +38,7 @@
 * 09/01/17-09/08/17: Installed python2 and pycharm on my mac
 * 09/18/17: I will try to build up my rasberry pi 3
 * 09/18/17-09/24/17: Download jabref and sharelatext
+* 11/19/17: Created my first jupyter notebook
 
 
 # WRITING
@@ -53,6 +57,8 @@
 * 10/22/17: Conducted research articles for paper2
 * 10/29/17: Updated my readme.txt file
 * 10/29/17: Worked on paper2, and updated abstract for paper2
+* 11/09/17: Researched articles for my final paper
+* 11/10/17-11/21/17: Read articles for final paper
 
 
 
@@ -60,4 +66,5 @@
 * 09/18/17: Participated in online discussion 
 * 09/24/17: Listened to previous tutorial to get used with jabref 
 * 09/25/17: Need help with jabref/ ask question about it tomorrow
+
 
