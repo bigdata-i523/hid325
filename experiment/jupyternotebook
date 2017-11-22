@@ -1,1 +1,586 @@
 
+Jupyter NotebookLogout J.RobertLanglois_JupyterNotebook Last Checkpoint: 24 minutes ago (autosaved) Python 3
+Python 3 
+File
+Edit
+View
+Insert
+Cell
+Kernel
+Widgets
+Help
+
+In [1]:
+
+print('Hello Word')
+Hello Word
+In [4]:
+
+print ('my name is Robert and I am creating my first jupyter notebook')
+my name is Robert and I am creating my first jupyter notebook
+In [10]:
+
+import numpy as np
+import matplotlib.pyplot as plt
+​
+from sklearn.feature_extraction import image
+from sklearn.cluster import spectral_clustering
+​
+l = 100
+x, y = np.indices((l, l))
+​
+center1 = (28, 24)
+center2 = (40, 50)
+center3 = (67, 58)
+center4 = (24, 70)
+​
+radius1, radius2, radius3, radius4 = 16, 14, 15, 14
+​
+circle1 = (x - center1[0]) ** 2 + (y - center1[1]) ** 2 < radius1 ** 2
+circle2 = (x - center2[0]) ** 2 + (y - center2[1]) ** 2 < radius2 ** 2
+circle3 = (x - center3[0]) ** 2 + (y - center3[1]) ** 2 < radius3 ** 2
+circle4 = (x - center4[0]) ** 2 + (y - center4[1]) ** 2 < radius4 ** 2
+​
+# #############################################################################
+# 4 circles
+img = circle1 + circle2 + circle3 + circle4
+​
+# We use a mask that limits to the foreground: the problem that we are
+# interested in here is not separating the objects from the background,
+# but separating them one from the other.
+mask = img.astype(bool)
+​
+img = img.astype(float)
+img += 1 + 0.2 * np.random.randn(*img.shape)
+​
+# Convert the image into a graph with the value of the gradient on the
+# edges.
+graph = image.img_to_graph(img, mask=mask)
+​
+# Take a decreasing function of the gradient: we take it weakly
+# dependent from the gradient the segmentation is close to a voronoi
+graph.data = np.exp(-graph.data / graph.data.std())
+​
+# Force the solver to be arpack, since amg is numerically
+# unstable on this example
+labels = spectral_clustering(graph, n_clusters=4, eigen_solver='arpack')
+label_im = -np.ones(mask.shape)
+label_im[mask] = labels
+​
+plt.matshow(img)
+plt.matshow(label_im)
+​
+# #############################################################################
+# 2 circles
+img = circle1 + circle2
+mask = img.astype(bool)
+img = img.astype(float)
+​
+img += 1 + 0.2 * np.random.randn(*img.shape)
+​
+graph = image.img_to_graph(img, mask=mask)
+graph.data = np.exp(-graph.data / graph.data.std())
+​
+labels = spectral_clustering(graph, n_clusters=2, eigen_solver='arpack')
+label_im = -np.ones(mask.shape)
+label_im[mask] = labels
+​
+plt.matshow(img)
+plt.matshow(label_im)
+​
+plt.show()
+
+
+
+
+In [6]:
+
+​
+​
+np.random.seed(42)
+​
+digits = load_digits()
+data = scale(digits.data)
+​
+n_samples, n_features = data.shape
+n_digits = len(np.unique(digits.target))
+labels = digits.target
+​
+sample_size = 300
+​
+print("n_digits: %d, \t n_samples %d, \t n_features %d"
+      % (n_digits, n_samples, n_features))
+​
+​
+print(79 * '_')
+print('% 9s' % 'init'
+      '    time  inertia    homo   compl  v-meas     ARI AMI  silhouette')
+​
+​
+def bench_k_means(estimator, name, data):
+    t0 = time()
+    estimator.fit(data)
+    print('% 9s   %.2fs    %i   %.3f   %.3f   %.3f   %.3f   %.3f    %.3f'
+          % (name, (time() - t0), estimator.inertia_,
+             metrics.homogeneity_score(labels, estimator.labels_),
+             metrics.completeness_score(labels, estimator.labels_),
+             metrics.v_measure_score(labels, estimator.labels_),
+             metrics.adjusted_rand_score(labels, estimator.labels_),
+             metrics.adjusted_mutual_info_score(labels,  estimator.labels_),
+             metrics.silhouette_score(data, estimator.labels_,
+                                      metric='euclidean',
+                                      sample_size=sample_size)))
+​
+bench_k_means(KMeans(init='k-means++', n_clusters=n_digits, n_init=10),
+              name="k-means++", data=data)
+​
+bench_k_means(KMeans(init='random', n_clusters=n_digits, n_init=10),
+              name="random", data=data)
+​
+# in this case the seeding of the centers is deterministic, hence we run the
+# kmeans algorithm only once with n_init=1
+pca = PCA(n_components=n_digits).fit(data)
+bench_k_means(KMeans(init=pca.components_, 
+                     n_clusters=n_digits, n_init=1),
+              name="PCA-based",
+              data=data)
+print(79 * '_')
+n_digits: 10, 	 n_samples 1797, 	 n_features 64
+_______________________________________________________________________________
+init    time  inertia    homo   compl  v-meas     ARI AMI  silhouette
+k-means++   0.35s    69432   0.602   0.650   0.625   0.465   0.598    0.146
+   random   0.35s    69694   0.669   0.710   0.689   0.553   0.666    0.147
+PCA-based   0.06s    70804   0.671   0.698   0.684   0.561   0.668    0.118
+_______________________________________________________________________________
+In [11]:
+
+print('It is fun and cool created my first jupyter notebook')
+print(__doc__)
+​
+import shutil
+import tempfile
+​
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import linalg, ndimage
+​
+from sklearn.feature_extraction.image import grid_to_graph
+from sklearn import feature_selection
+from sklearn.cluster import FeatureAgglomeration
+from sklearn.linear_model import BayesianRidge
+from sklearn.pipeline import Pipeline
+from sklearn.externals.joblib import Memory
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import KFold
+​
+# #############################################################################
+# Generate data
+n_samples = 200
+size = 40  # image size
+roi_size = 15
+snr = 5.
+np.random.seed(0)
+mask = np.ones([size, size], dtype=np.bool)
+​
+coef = np.zeros((size, size))
+coef[0:roi_size, 0:roi_size] = -1.
+coef[-roi_size:, -roi_size:] = 1.
+​
+X = np.random.randn(n_samples, size ** 2)
+for x in X:  # smooth data
+    x[:] = ndimage.gaussian_filter(x.reshape(size, size), sigma=1.0).ravel()
+X -= X.mean(axis=0)
+X /= X.std(axis=0)
+​
+y = np.dot(X, coef.ravel())
+noise = np.random.randn(y.shape[0])
+noise_coef = (linalg.norm(y, 2) / np.exp(snr / 20.)) / linalg.norm(noise, 2)
+y += noise_coef * noise  # add noise
+​
+# #############################################################################
+# Compute the coefs of a Bayesian Ridge with GridSearch
+cv = KFold(2)  # cross-validation generator for model selection
+ridge = BayesianRidge()
+cachedir = tempfile.mkdtemp()
+mem = Memory(cachedir=cachedir, verbose=1)
+​
+# Ward agglomeration followed by BayesianRidge
+connectivity = grid_to_graph(n_x=size, n_y=size)
+ward = FeatureAgglomeration(n_clusters=10, connectivity=connectivity,
+                            memory=mem)
+clf = Pipeline([('ward', ward), ('ridge', ridge)])
+# Select the optimal number of parcels with grid search
+clf = GridSearchCV(clf, {'ward__n_clusters': [10, 20, 30]}, n_jobs=1, cv=cv)
+clf.fit(X, y)  # set the best parameters
+coef_ = clf.best_estimator_.steps[-1][1].coef_
+coef_ = clf.best_estimator_.steps[0][1].inverse_transform(coef_)
+coef_agglomeration_ = coef_.reshape(size, size)
+​
+# Anova univariate feature selection followed by BayesianRidge
+f_regression = mem.cache(feature_selection.f_regression)  # caching function
+anova = feature_selection.SelectPercentile(f_regression)
+clf = Pipeline([('anova', anova), ('ridge', ridge)])
+# Select the optimal percentage of features with grid search
+clf = GridSearchCV(clf, {'anova__percentile': [5, 10, 20]}, cv=cv)
+clf.fit(X, y)  # set the best parameters
+coef_ = clf.best_estimator_.steps[-1][1].coef_
+coef_ = clf.best_estimator_.steps[0][1].inverse_transform(coef_.reshape(1, -1))
+coef_selection_ = coef_.reshape(size, size)
+​
+# #############################################################################
+# Inverse the transformation to plot the results on an image
+plt.close('all')
+plt.figure(figsize=(7.3, 2.7))
+plt.subplot(1, 3, 1)
+plt.imshow(coef, interpolation="nearest", cmap=plt.cm.RdBu_r)
+plt.title("True weights")
+plt.subplot(1, 3, 2)
+plt.imshow(coef_selection_, interpolation="nearest", cmap=plt.cm.RdBu_r)
+plt.title("Feature Selection")
+plt.subplot(1, 3, 3)
+plt.imshow(coef_agglomeration_, interpolation="nearest", cmap=plt.cm.RdBu_r)
+plt.title("Feature Agglomeration")
+plt.subplots_adjust(0.04, 0.0, 0.98, 0.94, 0.16, 0.26)
+plt.show()
+​
+Automatically created module for IPython interactive environment
+________________________________________________________________________________
+[Memory] Calling sklearn.cluster.hierarchical.ward_tree...
+ward_tree(array([[-0.451933, ..., -0.675318],
+       ..., 
+       [ 0.275706, ..., -1.085711]]), 
+<1600x1600 sparse matrix of type '<class 'numpy.int32'>'
+	with 7840 stored elements in COOrdinate format>, n_clusters=None)
+________________________________________________________ward_tree - 0.2s, 0.0min
+________________________________________________________________________________
+[Memory] Calling sklearn.cluster.hierarchical.ward_tree...
+ward_tree(array([[ 0.905206, ...,  0.161245],
+       ..., 
+       [-0.849835, ..., -1.091621]]), 
+<1600x1600 sparse matrix of type '<class 'numpy.int32'>'
+	with 7840 stored elements in COOrdinate format>, n_clusters=None)
+________________________________________________________ward_tree - 0.1s, 0.0min
+________________________________________________________________________________
+[Memory] Calling sklearn.cluster.hierarchical.ward_tree...
+ward_tree(array([[ 0.905206, ..., -0.675318],
+       ..., 
+       [-0.849835, ..., -1.085711]]), 
+<1600x1600 sparse matrix of type '<class 'numpy.int32'>'
+	with 7840 stored elements in COOrdinate format>, n_clusters=None)
+________________________________________________________ward_tree - 0.3s, 0.0min
+________________________________________________________________________________
+[Memory] Calling sklearn.feature_selection.univariate_selection.f_regression...
+f_regression(array([[-0.451933, ...,  0.275706],
+       ..., 
+       [-0.675318, ..., -1.085711]]), 
+array([ 25.267703, ..., -25.026711]))
+_____________________________________________________f_regression - 0.0s, 0.0min
+________________________________________________________________________________
+[Memory] Calling sklearn.feature_selection.univariate_selection.f_regression...
+f_regression(array([[ 0.905206, ..., -0.849835],
+       ..., 
+       [ 0.161245, ..., -1.091621]]), 
+array([ -27.447268, ..., -112.638768]))
+_____________________________________________________f_regression - 0.0s, 0.0min
+________________________________________________________________________________
+[Memory] Calling sklearn.feature_selection.univariate_selection.f_regression...
+f_regression(array([[ 0.905206, ..., -0.849835],
+       ..., 
+       [-0.675318, ..., -1.085711]]), 
+array([-27.447268, ..., -25.026711]))
+_____________________________________________________f_regression - 0.0s, 0.0min
+
+In [5]:
+
+print(__doc__)
+​
+from time import time
+import numpy as np
+import matplotlib.pyplot as plt
+​
+from sklearn import metrics
+from sklearn.cluster import KMeans
+from sklearn.datasets import load_digits
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import scale
+​
+np.random.seed(42)
+​
+digits = load_digits()
+data = scale(digits.data)
+​
+n_samples, n_features = data.shape
+n_digits = len(np.unique(digits.target))
+labels = digits.target
+​
+sample_size = 300
+​
+print("n_digits: %d, \t n_samples %d, \t n_features %d"
+      % (n_digits, n_samples, n_features))
+​
+​
+print(82 * '_')
+print('init\t\ttime\tinertia\thomo\tcompl\tv-meas\tARI\tAMI\tsilhouette')
+​
+​
+def bench_k_means(estimator, name, data):
+    t0 = time()
+    estimator.fit(data)
+    print('%-9s\t%.2fs\t%i\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f'
+          % (name, (time() - t0), estimator.inertia_,
+             metrics.homogeneity_score(labels, estimator.labels_),
+             metrics.completeness_score(labels, estimator.labels_),
+             metrics.v_measure_score(labels, estimator.labels_),
+             metrics.adjusted_rand_score(labels, estimator.labels_),
+             metrics.adjusted_mutual_info_score(labels,  estimator.labels_),
+             metrics.silhouette_score(data, estimator.labels_,
+                                      metric='euclidean',
+                                      sample_size=sample_size)))
+​
+bench_k_means(KMeans(init='k-means++', n_clusters=n_digits, n_init=10),
+              name="k-means++", data=data)
+​
+bench_k_means(KMeans(init='random', n_clusters=n_digits, n_init=10),
+              name="random", data=data)
+​
+# in this case the seeding of the centers is deterministic, hence we run the
+# kmeans algorithm only once with n_init=1
+pca = PCA(n_components=n_digits).fit(data)
+bench_k_means(KMeans(init=pca.components_, n_clusters=n_digits, n_init=1),
+              name="PCA-based",
+              data=data)
+print(82 * '_')
+# Visualize the results on PCA-reduced data
+​
+reduced_data = PCA(n_components=2).fit_transform(data)
+kmeans = KMeans(init='k-means++', n_clusters=n_digits, n_init=10)
+kmeans.fit(reduced_data)
+​
+# Step size of the mesh. Decrease to increase the quality of the VQ.
+h = .02     # point in the mesh [x_min, x_max]x[y_min, y_max].
+​
+# Plot the decision boundary. For that, we will assign a color to each
+x_min, x_max = reduced_data[:, 0].min() - 1, reduced_data[:, 0].max() + 1
+y_min, y_max = reduced_data[:, 1].min() - 1, reduced_data[:, 1].max() + 1
+xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
+​
+# Obtain labels for each point in mesh. Use last trained model.
+Z = kmeans.predict(np.c_[xx.ravel(), yy.ravel()])
+​
+# Put the result into a color plot
+Z = Z.reshape(xx.shape)
+plt.figure(1)
+plt.clf()
+plt.imshow(Z, interpolation='nearest',
+           extent=(xx.min(), xx.max(), yy.min(), yy.max()),
+           cmap=plt.cm.Paired,
+           aspect='auto', origin='lower')
+​
+plt.plot(reduced_data[:, 0], reduced_data[:, 1], 'k.', markersize=2)
+# Plot the centroids as a white X
+centroids = kmeans.cluster_centers_
+plt.scatter(centroids[:, 0], centroids[:, 1],
+            marker='x', s=169, linewidths=3,
+            color='w', zorder=10)
+plt.title('K-means clustering on the digits dataset (PCA-reduced data)\n'
+          'Centroids are marked with white cross')
+plt.xlim(x_min, x_max)
+plt.ylim(y_min, y_max)
+plt.xticks(())
+plt.yticks(())
+plt.show()
+​
+Automatically created module for IPython interactive environment
+n_digits: 10, 	 n_samples 1797, 	 n_features 64
+__________________________________________________________________________________
+init		time	inertia	homo	compl	v-meas	ARI	AMI	silhouette
+k-means++	0.34s	69432	0.602	0.650	0.625	0.465	0.598	0.146
+random   	0.31s	69694	0.669	0.710	0.689	0.553	0.666	0.147
+PCA-based	0.05s	70804	0.671	0.698	0.684	0.561	0.668	0.118
+__________________________________________________________________________________
+
+In [8]:
+
+import matplotlib.pyplot as plt
+import numpy as np
+​
+from sklearn.cluster import AgglomerativeClustering
+from sklearn.metrics import pairwise_distances
+​
+np.random.seed(0)
+​
+# Generate waveform data
+n_features = 2000
+t = np.pi * np.linspace(0, 1, n_features)
+​
+​
+def sqr(x):
+    return np.sign(np.cos(x))
+​
+X = list()
+y = list()
+for i, (phi, a) in enumerate([(.5, .15), (.5, .6), (.3, .2)]):
+    for _ in range(30):
+        phase_noise = .01 * np.random.normal()
+        amplitude_noise = .04 * np.random.normal()
+        additional_noise = 1 - 2 * np.random.rand(n_features)
+        # Make the noise sparse
+        additional_noise[np.abs(additional_noise) < .997] = 0
+​
+        X.append(12 * ((a + amplitude_noise)
+                 * (sqr(6 * (t + phi + phase_noise)))
+                 + additional_noise))
+        y.append(i)
+​
+X = np.array(X)
+y = np.array(y)
+​
+n_clusters = 3
+​
+labels = ('Waveform 1', 'Waveform 2', 'Waveform 3')
+​
+# Plot the ground-truth labelling
+plt.figure()
+plt.axes([0, 0, 1, 1])
+for l, c, n in zip(range(n_clusters), 'rgb',
+                   labels):
+    lines = plt.plot(X[y == l].T, c=c, alpha=.5)
+    lines[0].set_label(n)
+​
+plt.legend(loc='best')
+​
+plt.axis('tight')
+plt.axis('off')
+plt.suptitle("Ground truth", size=20)
+​
+​
+# Plot the distances
+for index, metric in enumerate(["cosine", "euclidean", "cityblock"]):
+    avg_dist = np.zeros((n_clusters, n_clusters))
+    plt.figure(figsize=(5, 4.5))
+    for i in range(n_clusters):
+        for j in range(n_clusters):
+            avg_dist[i, j] = pairwise_distances(X[y == i], X[y == j],
+                                                metric=metric).mean()
+    avg_dist /= avg_dist.max()
+    for i in range(n_clusters):
+        for j in range(n_clusters):
+            plt.text(i, j, '%5.3f' % avg_dist[i, j],
+                     verticalalignment='center',
+                     horizontalalignment='center')
+​
+    plt.imshow(avg_dist, interpolation='nearest', cmap=plt.cm.gnuplot2,
+               vmin=0)
+    plt.xticks(range(n_clusters), labels, rotation=45)
+    plt.yticks(range(n_clusters), labels)
+    plt.colorbar()
+    plt.suptitle("Interclass %s distances" % metric, size=18)
+    plt.tight_layout()
+​
+​
+# Plot clustering results
+for index, metric in enumerate(["cosine", "euclidean", "cityblock"]):
+    model = AgglomerativeClustering(n_clusters=n_clusters,
+                                    linkage="average", affinity=metric)
+    model.fit(X)
+    plt.figure()
+    plt.axes([0, 0, 1, 1])
+    for l, c in zip(np.arange(model.n_clusters), 'rgbk'):
+        plt.plot(X[model.labels_ == l].T, c=c, alpha=.5)
+    plt.axis('tight')
+    plt.axis('off')
+    plt.suptitle("AgglomerativeClustering(affinity=%s)" % metric, size=20)
+​
+​
+plt.show()
+
+
+
+
+
+
+
+In [9]:
+
+print(__doc__)
+from time import time
+​
+import numpy as np
+from scipy import ndimage
+from matplotlib import pyplot as plt
+​
+from sklearn import manifold, datasets
+​
+digits = datasets.load_digits(n_class=10)
+X = digits.data
+y = digits.target
+n_samples, n_features = X.shape
+​
+np.random.seed(0)
+​
+def nudge_images(X, y):
+    # Having a larger dataset shows more clearly the behavior of the
+    # methods, but we multiply the size of the dataset only by 2, as the
+    # cost of the hierarchical clustering methods are strongly
+    # super-linear in n_samples
+    shift = lambda x: ndimage.shift(x.reshape((8, 8)),
+                                  .3 * np.random.normal(size=2),
+                                  mode='constant',
+                                  ).ravel()
+    X = np.concatenate([X, np.apply_along_axis(shift, 1, X)])
+    Y = np.concatenate([y, y], axis=0)
+    return X, Y
+​
+​
+X, y = nudge_images(X, y)
+​
+​
+#----------------------------------------------------------------------
+# Visualize the clustering
+def plot_clustering(X_red, X, labels, title=None):
+    x_min, x_max = np.min(X_red, axis=0), np.max(X_red, axis=0)
+    X_red = (X_red - x_min) / (x_max - x_min)
+​
+    plt.figure(figsize=(6, 4))
+    for i in range(X_red.shape[0]):
+        plt.text(X_red[i, 0], X_red[i, 1], str(y[i]),
+                 color=plt.cm.spectral(labels[i] / 10.),
+                 fontdict={'weight': 'bold', 'size': 9})
+​
+    plt.xticks([])
+    plt.yticks([])
+    if title is not None:
+        plt.title(title, size=17)
+    plt.axis('off')
+    plt.tight_layout()
+​
+#----------------------------------------------------------------------
+# 2D embedding of the digits dataset
+print("Computing embedding")
+X_red = manifold.SpectralEmbedding(n_components=2).fit_transform(X)
+print("Done.")
+​
+from sklearn.cluster import AgglomerativeClustering
+​
+for linkage in ('ward', 'average', 'complete'):
+    clustering = AgglomerativeClustering(linkage=linkage, n_clusters=10)
+    t0 = time()
+    clustering.fit(X_red)
+    print("%s : %.2fs" % (linkage, time() - t0))
+​
+    plot_clustering(X_red, X, clustering.labels_, "%s linkage" % linkage)
+​
+​
+plt.show()
+Automatically created module for IPython interactive environment
+Computing embedding
+Done.
+ward : 0.58s
+average : 0.54s
+complete : 0.52s
+
+
+
+In [ ]:
+
+​
