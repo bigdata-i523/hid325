@@ -20,8 +20,8 @@
 * 09/24/17: Update my notebook
 * 10/21/17: Watched video on how to new jabref
 * 11/19/17: Learned about jupyter notebook
-*11/19/17 : Watched youtube videos on how to create jupyter notebook 
-
+* 11/19/17 : Watched youtube videos on how to create jupyter notebook 
+* 11/27/17 : Attended online meeting at 6pm. Asked question about final paper.
 
 
 # THEORY
@@ -59,6 +59,7 @@
 * 10/29/17: Worked on paper2, and updated abstract for paper2
 * 11/09/17: Researched articles for my final paper
 * 11/10/17-11/21/17: Read articles for final paper
+* 11/27/17: Started writing the final paper
 
 
 
