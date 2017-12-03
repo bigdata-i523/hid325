@@ -39,6 +39,7 @@
 * 09/18/17: I will try to build up my rasberry pi 3
 * 09/18/17-09/24/17: Download jabref and sharelatext
 * 11/19/17: Created my first jupyter notebook
+* 11/20/17- 12/02/17: Learned how insert images in sharelatex and practiced writing python code
 
 
 # WRITING
