@@ -60,6 +60,8 @@
 * 11/09/17: Researched articles for my final paper
 * 11/10/17-11/21/17: Read articles for final paper
 * 11/27/17: Started writing the final paper
+* 12/02/17: Reviewed final project
+* 12/03/17: Updated my final project darft and Bibtex
 
 
 
@@ -67,5 +69,6 @@
 * 09/18/17: Participated in online discussion 
 * 09/24/17: Listened to previous tutorial to get used with jabref 
 * 09/25/17: Need help with jabref/ ask question about it tomorrow
+* 12/01/17: Attended online office hour and asked questions about how upload jupiter notebook and final project.
 
 
