@@ -60,7 +60,7 @@ project:
     type: report
     author:
         - J. Robert Langlois
-    pid:
+    hid:
         - 325
     chapter: Data Sharing, Replication, and Data Archiving
     title: >
