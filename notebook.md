@@ -63,6 +63,7 @@
 * 11/27/17: Started writing the final paper
 * 12/02/17: Reviewed final project
 * 12/03/17: Updated my final project darft and Bibtex
+* 12/03/17: Updated the Readme file and project
 
 
 
