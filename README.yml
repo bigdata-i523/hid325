@@ -67,7 +67,7 @@ project:
         The importance of data sharing and the replication of the
         sciences, but what about data archiving?
     abstract: >
-        This project will showcase the importance to encourage data
+        This project showcases the importance to encourage data
         sharing among scientists to advance the sciences. Data sharing
         presents many advantages, such as it reduces costs, it allows
         researchers to build up on the work of previous researchers, it
@@ -79,4 +79,4 @@ project:
         get together in an attempt to solve the problems surrounding
         data archiving.
     url: https://github.com/bigdata-i523/hip325/project/report.pdf
-    status: 90%
+    status: 97% and will be 100% on 12/4/17 @11:59pm
