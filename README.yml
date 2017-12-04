@@ -64,8 +64,7 @@ project:
         - 325
     chapter: Data Sharing, Replication, and Data Archiving
     title: >
-        The importance of data sharing and the replication of the
-        sciences, but what about data archiving?
+        The importance of data sharing and replication, but what about data archiving?
     abstract: >
         With the increase of digital information, scientists have faced many challenges when
         it comes to the topic of big data management, including data archiving and data sharing.
