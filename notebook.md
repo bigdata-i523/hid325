@@ -20,8 +20,9 @@
 * 09/24/17: Update my notebook
 * 10/21/17: Watched video on how to new jabref
 * 11/19/17: Learned about jupyter notebook
-* 11/19/17 : Watched youtube videos on how to create jupyter notebook 
-* 11/27/17 : Attended online meeting at 6pm. Asked question about final paper.
+* 11/19/17: Watched youtube videos on how to create jupyter notebook 
+* 11/27/17: Attended online meeting at 6pm. Asked question about final paper.
+* 12/04/17: Attended online meeting at 6 to 7 pm and asked questions about compiling final report.
 
 
 # THEORY
@@ -64,6 +65,7 @@
 * 12/02/17: Reviewed final project
 * 12/03/17: Updated my final project darft and Bibtex
 * 12/03/17: Updated the Readme file and project
+* 12/04/17: Made changes to final report and removed unnecessary items.
 
 
 
