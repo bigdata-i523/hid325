@@ -1,6 +1,39 @@
 \documentclass[sigconf]{acmart}
 
+\usepackage{tikz}
+
+\makeatletter
+\pgfdeclareshape{datastore}{
+  \inheritsavedanchors[from=rectangle]
+  \inheritanchorborder[from=rectangle]
+  \inheritanchor[from=rectangle]{center}
+  \inheritanchor[from=rectangle]{base}
+  \inheritanchor[from=rectangle]{north}
+  \inheritanchor[from=rectangle]{north east}
+  \inheritanchor[from=rectangle]{east}
+  \inheritanchor[from=rectangle]{south east}
+  \inheritanchor[from=rectangle]{south}
+  \inheritanchor[from=rectangle]{south west}
+  \inheritanchor[from=rectangle]{west}
+  \inheritanchor[from=rectangle]{north west}
+  \backgroundpath{
+    %  store lower right in xa/ya and upper right in xb/yb
+    \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+    \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+    \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
+    \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
+    \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+    \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
+ }
+}
+\makeatother
+
+
+
+
 \input{format/i523}
+
+\usetikzlibrary{arrows}
 
 \begin{document}
 
@@ -182,39 +215,8 @@ As we can see, management big data requires that highly individuals to collect, 
 
 Thus, it is critical to converge our effort in passing the management tools and skills to current students and developing scientists who will be highly skilled in managing Big data analysis. Considering all of the different breakthroughs that are happening in the digital realm, it is safe to say that Big data is bigger and bigger; thus the necessity to train scientists to face the challenges that await us ahead.
 
-% Data flow diagram
-% Author: David Fokkema
-\documentclass{article}
-\usepackage{tikz}
-\usetikzlibrary{arrows}
 
-% Defines a `datastore' shape for use in DFDs.  This inherits from a
-% rectangle and only draws two horizontal lines.
-\makeatletter
-\pgfdeclareshape{datastore}{
-  \inheritsavedanchors[from=rectangle]
-  \inheritanchorborder[from=rectangle]
-  \inheritanchor[from=rectangle]{center}
-  \inheritanchor[from=rectangle]{base}
-  \inheritanchor[from=rectangle]{north}
-  \inheritanchor[from=rectangle]{north east}
-  \inheritanchor[from=rectangle]{east}
-  \inheritanchor[from=rectangle]{south east}
-  \inheritanchor[from=rectangle]{south}
-  \inheritanchor[from=rectangle]{south west}
-  \inheritanchor[from=rectangle]{west}
-  \inheritanchor[from=rectangle]{north west}
-  \backgroundpath{
-    %  store lower right in xa/ya and upper right in xb/yb
-    \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
-    \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
-    \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
-    \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
-    \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@yb}}
-    \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
- }
-}
-\makeatother
+
 
 
 \begin{center}
@@ -269,9 +271,6 @@ It is important to note that there are other types of data lifecycle in the real
 
 The codes for this figure was borrowed from Jerome Tremblay.
 
-% Author : Jerome Tremblay
-\documentclass{article}
-\usepackage{tikz}
 
 \begin{tikzpicture}
 
