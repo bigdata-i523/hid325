@@ -34,7 +34,6 @@ paper1:
         - 325
     status: Oct 23 17 100%
     title: Impact of Big Data on the Privacy of Mental Health Patients
-    type: latex
     url: https://github.com/bigdata-i523/hid325/paper1/report.pdf
 paper2:
     review: Nov 6 2017
@@ -54,7 +53,6 @@ paper2:
         - 325
     status: 100%
     title: The importance of data sharing and the replication of the sciences
-    type: latex
     url: https://github.com/bigdata-i523/hid325/paper2/report.pdf
 project:
     type: report
